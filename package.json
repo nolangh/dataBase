@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/nolangh/dataBase/issues"
   },
-  "homepage": "https://github.com/nolangh/dataBase#readme"
+  "homepage": "https://github.com/nolangh/dataBase#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2"
+  }
 }
