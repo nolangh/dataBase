@@ -1,0 +1,23 @@
+html
+    head
+        title= pageTitle
+    body 
+        h1= pageTitle
+        h3= restaurant.name
+        -let coord= restaurant.address.coord
+        -let latitude= restaurant.address.coord[1]
+        -let longitude= restaurant.address.coord[0]
+        -let cuisine = restaurant.cuisine
+        -let url = 'https://www.google.com/maps/place/' + latitude + ',' + longitude
+        h3= cuisine
+        h3= coord
+        h3= url
+        h3= restraunt_id 
+            form(role='form' method='POST' action='/cuisine/'+restaurant_id)
+              div.form-group
+                label(for='name') Cuisine:
+                input#name.form-control(type='text', placeholder=restaurant.cuisine name='cuisine')
+                button.btn.btn-primary(type="submit") Update
+        h4 Location 
+             a(href=url) here
+        h4= restaurant.address.coord
